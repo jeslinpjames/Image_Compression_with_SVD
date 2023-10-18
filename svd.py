@@ -25,3 +25,13 @@ class SVD:
 
         return reconstructed_matrix
     
+if __name__=="__main__":
+    matrix = np.array([[1, 2, 3], [4, 5, 6]])
+    svd = SVD(matrix)
+    print(svd.get_U())
+    print(svd.get_S())
+    print(svd.get_Vt())
+    print(svd.reconstruct_matrix(1))
+    print(svd.reconstruct_matrix(2))
+    print(svd.reconstruct_matrix(3))
+    print(svd.reconstruct_matrix())
